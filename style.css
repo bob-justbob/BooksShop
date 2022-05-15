@@ -1,0 +1,26 @@
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    gap: 5vh;
+}
+
+
+.box {
+    width: 99%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+.image {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
