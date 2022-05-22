@@ -11,12 +11,12 @@ fetch("./assets/JSON.json")
 
         api.map(function(info) {
     
-            var wrap =document.createElement("main")
+            var main =document.createElement("main")
             
    
             var mainDiv = document.createElement("div")
             mainDiv.classList= "main-div"
-            wrap.appendChild(mainDiv);
+            main.appendChild(mainDiv);
             document.getElementsByTagName("body")[0].appendChild(mainDiv);
            
            
@@ -41,8 +41,9 @@ fetch("./assets/JSON.json")
 
 
             var right = document.createElement("div")
-            right.className = "righ"
+            right.className = "right"
             box.appendChild(right)
+            
 
             let title = document.createElement("h2")
             title.className= "header"
@@ -65,7 +66,75 @@ fetch("./assets/JSON.json")
 
             let btn = document.createElement("button")
             btn.textContent= "Read more"
+            btn.className= "read"
             divBtn.appendChild(btn)
+
+            let card = document.createElement("button")
+            card.textContent= "Add to card"
+            card.className= "card"
+            divBtn.appendChild(card)
+
+
+            let modal = document.createElement("div")
+            modal.className= "modal"
+            document.getElementsByTagName("body")[0].appendChild(modal)
+
+
+            let modalbox = document.createElement("div")
+            modalbox.className= "modalbox"
+            modal.appendChild(modalbox)
+
+            let modalleft = document.createElement("div")
+            modalleft.className= "modalleft"
+            modalbox.appendChild(modalleft)
+
+            let modalimg = document.createElement("img")
+            modalimg.className= "modalimage"
+            modalimg.src = `${info.imageLink}`;
+            modalleft.appendChild(modalimg)
+
+
+            let modalright = document.createElement("div")
+            modalright.className= "modalright"
+            modalbox.appendChild(modalright)
+
+            let modaltitle = document.createElement("h2")
+            modaltitle.className = "modaltitle"
+            modaltitle.innerHTML= `${info.title}`
+            modalright.appendChild(modaltitle)
+
+            let modalauthor = document.createElement("h4")
+            modalauthor.className= "modalauthor"
+            modalauthor.innerHTML=  `${info.author}`
+            modalright.appendChild(modalauthor)
+
+
+            let modaldes = document.createElement("p")
+            modaldes.className= "modaldes"
+            modaldes.innerHTML= `${info.description}`
+            modalright.appendChild(modaldes)
+
+            let modalclose = document.createElement("p")
+            modalclose.className= "modalclose"
+            modalclose.innerText= "X"
+            modalright.appendChild(modalclose)
+
+            btn.onclick = function(){
+                modal.style.display = "block";
+            }
+            modalclose.onclick = function(){
+                modal.style.display = "none";
+            }
+            window.onclick =function(event){
+                if(event.target == modal){
+                    modal.style.display="none";
+                }
+            }
+
+
+
+
+
         })
         
     });
