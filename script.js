@@ -11,36 +11,42 @@ fetch("./assets/JSON.json")
 
         api.map(function(info) {
     
-            var main =document.createElement("main")
+            let main =document.createElement("main")
             
-   
-            var mainDiv = document.createElement("div")
+
+
+
+            let mainDiv = document.createElement("div")
             mainDiv.classList= "main-div"
             main.appendChild(mainDiv);
             document.getElementsByTagName("body")[0].appendChild(mainDiv);
+
+            let boxright = document.createElement("aside")
+            boxright.className= "boxright"
+            document.getElementsByTagName("body")[0].appendChild(boxright)
            
            
-            var box = document.createElement("div")
+            let box = document.createElement("div")
             box.className = "box";
             mainDiv.appendChild(box)
           
           
       
 
-            var left = document.createElement("div")
+            let left = document.createElement("div")
             left.className = "Left";
             box.appendChild(left)
             
     
 
-            var img = document.createElement("img")
+            let img = document.createElement("img")
             img.className = "image";
             img.src = `${info.imageLink}`;
             left.appendChild(img);
            
 
 
-            var right = document.createElement("div")
+            let right = document.createElement("div")
             right.className = "right"
             box.appendChild(right)
             
@@ -103,10 +109,6 @@ fetch("./assets/JSON.json")
             modaltitle.innerHTML= `${info.title}`
             modalright.appendChild(modaltitle)
 
-            let modalauthor = document.createElement("h4")
-            modalauthor.className= "modalauthor"
-            modalauthor.innerHTML=  `${info.author}`
-            modalright.appendChild(modalauthor)
 
 
             let modaldes = document.createElement("p")
