@@ -5,12 +5,11 @@ body {
     justify-content: space-around;
     align-items: center;
     gap: 2vh;
+    position: relative;
 }
 
 
-.boxright {
 
-}
 
 .box {
     height: 33vw;
@@ -21,6 +20,7 @@ body {
     margin-left: 1vw;
 
 }
+
 
 .box > * {
     color: white;
@@ -126,4 +126,25 @@ body {
 
 .modaltitle, .modalauthor, .modaldes {
     padding: 10px 30px;
+}
+
+.main-div {
+    background-color: aqua;
+    height: 33vw;
+    width: 50vw;
+}
+
+.boxright {
+    position: relative;
+    height: 33vw;
+}
+
+.rightbox {
+    position: absolute;
+    background-color: rgb(213, 223, 223);
+    height: 34vw;
+    width: 50vw;
+    top: 0;
+    left: 0;
+    
 }

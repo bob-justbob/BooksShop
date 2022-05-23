@@ -12,8 +12,6 @@ fetch("./assets/JSON.json")
         api.map(function(info) {
     
             let main =document.createElement("main")
-            
-
 
 
             let mainDiv = document.createElement("div")
@@ -24,6 +22,10 @@ fetch("./assets/JSON.json")
             let boxright = document.createElement("aside")
             boxright.className= "boxright"
             document.getElementsByTagName("body")[0].appendChild(boxright)
+
+            let rightbox = document.createElement("div")
+            rightbox.className= "rightbox"
+            boxright.appendChild(rightbox)
            
            
             let box = document.createElement("div")
@@ -132,7 +134,6 @@ fetch("./assets/JSON.json")
                     modal.style.display="none";
                 }
             }
-
 
 
 
